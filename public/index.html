@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <h2 class="sidebar-title">Sentiment Analysis</h2>
+                    <button class="close-sidebar">&times;</button>
+                </div>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="https://github.com/Hritikraj8804/Sentiment-Analysis.git" target="_blank">GitHub</a></li>
+                    <li><a href="data.html">Data</a></li>
+                </ul>
+            </div>
+            <div class="right-nav">
+                <a href="#about">About</a>
+                <a href="#contact">Contact Us</a>
+                <button class="get-started-button">Get Started</button>
+            </div>
+        </nav>
+    </header>
+    <div class="container intro-container">
+        <div class="intro-columns">
+            <div class="intro-left">
+                <h1>Sentiment Analysis</h1>
+                <h2>Understand your customer feedback effortlessly.</h2>
+                <p>
+                    Analyze reviews and feedback from your CSV files to gain valuable insights.
+                </p>
+                <button class="learn-more-button">Learn More</button>
+                <div class="tech-icons">
+                    <i class="fa-brands fa-python tech-icon" alt="Python"></i>
+                    <i class="fa-brands fa-js tech-icon" alt="JavaScript"></i>
+                    <i class="fa-brands fa-node tech-icon" alt="Node.js"></i>
+                    <i class="fa-brands fa-css tech-icon" alt="CSS3"></i>
+                    <i class="fa-brands fa-html5 tech-icon" alt="HTML5"></i>
+                </div>
+            </div>
+            <div class="intro-right">
+                <img src="intro.gif" alt="Animated Sentiment Analysis" class="intro-gif">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Sentiment Analysis</h1>
+        <section id="upload-section">
+            <p>Upload your CSV file containing reviews or feedback.</p>
+            <form id="sentiment-form" enctype="multipart/form-data">
+                <label for="csv_file" class="file-upload-label">
+                    Choose CSV File
+                    <input type="file" id="csv_file" name="csv_file" accept=".csv">
+                </label>
+                <button type="submit" class="submit-button">Analyze</button>
+            </form>
+            <div id="upload-status" class="status-message"></div>
+        </section>
+        <section id="analysis-results" class="hidden">
+            <h2>Analysis Results</h2>
+            <div id="results-display">
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
